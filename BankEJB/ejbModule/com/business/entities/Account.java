@@ -1,4 +1,4 @@
-package business.entities;
+package com.business.entities;
 
 import java.io.Serializable;
 import java.lang.Long;
