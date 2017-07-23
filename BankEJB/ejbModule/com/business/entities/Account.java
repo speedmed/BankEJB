@@ -15,6 +15,7 @@ public class Account implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long code;
 	private double balance;
 	private Date creationDate;
