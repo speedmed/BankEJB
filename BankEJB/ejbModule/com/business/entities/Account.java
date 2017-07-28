@@ -28,6 +28,9 @@ public class Account implements Serializable {
 	public Account(double balance) {
 		super();
 		this.balance = balance;
+		if(getCreationDate() == null){
+			this.creationDate = new Date();
+		}
 	}
 
 	public Long getCode() {
@@ -48,10 +51,8 @@ public class Account implements Serializable {
 		return this.creationDate;
 	}
 	
-	public void setCreationDate() {
-		if(getCreationDate() == null){
-			this.creationDate = new Date();
-		}
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
 	}
    
 }
