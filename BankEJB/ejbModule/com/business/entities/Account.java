@@ -23,7 +23,13 @@ public class Account implements Serializable {
 
 	public Account() {
 		super();
-	}   
+	}
+	
+	public Account(double balance) {
+		super();
+		this.balance = balance;
+	}
+
 	public Long getCode() {
 		return this.code;
 	}
@@ -41,9 +47,11 @@ public class Account implements Serializable {
 	public Date getCreationDate() {
 		return this.creationDate;
 	}
-
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
+	
+	public void setCreationDate() {
+		if(getCreationDate() == null){
+			this.creationDate = new Date();
+		}
 	}
    
 }
