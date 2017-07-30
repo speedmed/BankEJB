@@ -66,7 +66,7 @@ public class Bank implements BankRemote, BankLocal {
 	}
 
 	@Override
-	public void transfer(Long from, Long to, double amount) {
+	public void transfert(Long from, Long to, double amount) {
 		withdraw(from, amount);
 		deposit(to, amount);
 	}

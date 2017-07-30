@@ -15,5 +15,5 @@ public interface BankRemote {
 	
 	public void deposit(Long code, double amount);
 	public void withdraw(Long code, double amount);
-	public void transfer(Long from, Long to, double amount);
+	public void transfert(Long from, Long to, double amount);
 }
