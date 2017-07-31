@@ -25,7 +25,7 @@ public class RemoteClient {
 		try {
 			Context ctx = new InitialContext();
 			
-			String appName = "";
+			String appName = "BankEAR";
 			String moduleName = "BankEJB";
 			String beanName = "BK";
 			String remoteInterface = BankRemote.class.getName();
@@ -33,9 +33,9 @@ public class RemoteClient {
 			
 			BankRemote proxy = (BankRemote) ctx.lookup(name);
 			
-//			proxy.addAccount(new Account(100));
-//			proxy.addAccount(new Account(300));
-//			proxy.addAccount(new Account(700));
+			proxy.addAccount(new Account(100));
+			proxy.addAccount(new Account(300));
+			proxy.addAccount(new Account(700));
 //			Account a1 = proxy.getAccount(1L);
 //			System.out.println(a1.getBalance());
 //			proxy.deposit(1L, 1500);
